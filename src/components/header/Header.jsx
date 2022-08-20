@@ -1,5 +1,6 @@
 import React from 'react';
 import './header.css'
+import { GoSearch } from "react-icons/go";
 
 function Header() {
   return (
@@ -7,8 +8,10 @@ function Header() {
       <div className='header'>
         GitHub Viewer
       </div>
-      <div>
-
+      <div className='header'>
+        <button>
+          <GoSearch />
+        </button>
       </div>
     </div>
   );
