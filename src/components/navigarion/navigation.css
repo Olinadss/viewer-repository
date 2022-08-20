@@ -1,5 +1,14 @@
+.sidebar {
+  bottom: 0;
+  overflow-y: auto;
+  /* position: absolute; */
+  top: 0;
+  width: 220px;
+}
+
 .nav-pages {
   padding: 35px 0 50px;
   position: relative;
   display: flex;
+  border: 1px solid red;
 }
