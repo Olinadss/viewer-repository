@@ -1,14 +1,13 @@
 import {BrowserRouter, Switch, Route} from 'react-router-dom'
+import Main from './components/main/Main';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <BrowserRouter>
         <Switch>
-          <Route>
-            
-          </Route>
+          <Route exact path="/" component={Main} />
         </Switch>
       </BrowserRouter>
     </div>
