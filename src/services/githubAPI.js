@@ -1,7 +1,8 @@
-const getUsuario = async (username) => {
-  const request = await fetch(`https://api.github.com/users/${username}/repos`);
-  const requestJson = await request.json();
-  return requestJson.results;
-};
+import axios from "axios";
 
-export default getUsuario;
+const api = axios.create({
+  baseURL: 'https://api.github.com/users/',
+});
+
+
+export default api;
