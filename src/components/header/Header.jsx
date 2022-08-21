@@ -26,16 +26,18 @@ async function getUserData() {
       <div className='header'>
         GitHub Viewer
       </div>
-      <div className='header'>
-      <Input
-          type="text"
-          placeHolder="Digite seu username"
-          idFor="username"
-          action={e => setSearchValue(e.target.value)}
-          name="username"
-        />
+      <div>
+        <div className='header'>
+        <Input
+            type="text"
+            placeHolder="Digite seu username"
+            idFor="username"
+            action={e => setSearchValue(e.target.value)}
+            name="username"
+          />
+        </div>
         <button onClick={getUserData}>
-          <GoSearch />
+            <GoSearch />
         </button>
       </div>
     </div>
