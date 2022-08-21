@@ -35,10 +35,10 @@ async function getUserData() {
             action={e => setSearchValue(e.target.value)}
             name="username"
           />
-        </div>
-        <button onClick={getUserData}>
+          <button className='button-search' onClick={getUserData}>
             <GoSearch />
         </button>
+        </div>
       </div>
     </div>
   );

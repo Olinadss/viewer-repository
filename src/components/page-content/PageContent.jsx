@@ -4,7 +4,6 @@ import Context from '../context/Context';
 
 export default function PageContent() {
   const ctx =  useContext(Context)
-  console.log(ctx.userRepos);
 
   return (
     

@@ -13,7 +13,7 @@ function Input({
       <label htmlFor={ idFor }>
         <br />
         <input
-          className="form-input"
+          className="input-search"
           type={ type }
           placeholder={ placeHolder }
           id={ idFor }
