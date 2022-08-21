@@ -12,9 +12,10 @@ function Header() {
 async function getUserData() {
   try {
       const response = await requestAPI.get(`/${searchValue}/repos`);
-      console.log(response);
+      const responseUser = await requestAPI.get(`/${searchValue}`);
 
-      ctx.setUserData(response.data);
+      ctx.setUserRepos(response.data);
+      ctx.setUserData(responseUser.data);
   } catch(err) {
       console.log(err);
   }
