@@ -24,7 +24,7 @@ async function getUserData() {
   return (
     <div className="container-header" >
       <div className='header'>
-        GitHub Viewer
+        <h3>GitHub Viewer</h3>
       </div>
       <div>
         <div className='header'>
