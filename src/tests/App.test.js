@@ -12,4 +12,14 @@ describe('GitHub Viewer test', () => {
     });
     expect(logoText).toBeInTheDocument();
   })
+
+  test('Se o input e o botão estão sendo renderizados', () => {
+    render(<App/>)
+
+    const inputText = screen.getByRole('textbox');
+    expect(inputText).toBeInTheDocument()
+
+    const searchButton = screen.getByRole('button');
+    expect(searchButton).toBeInTheDocument()
+  })
 })
