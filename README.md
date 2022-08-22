@@ -15,4 +15,6 @@ Neste projeto eu desenvolvi uma aplicação e também para que funcione consumin
 3. Para rodar aplicação:
   * `npm start`
 
+3. Para rodar os testes:
+  * `npm test`
 ---
