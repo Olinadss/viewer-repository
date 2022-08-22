@@ -1,5 +1,5 @@
 import React from "react";
-import { render, screen } from "@testing-library/react";
+import { fireEvent, render, screen } from "@testing-library/react";
 import App from '../App'
 
 describe('GitHub Viewer test', () => {
@@ -21,5 +21,15 @@ describe('GitHub Viewer test', () => {
 
     const searchButton = screen.getByRole('button');
     expect(searchButton).toBeInTheDocument()
+  })
+
+  test('se o input recebe entrada de dados', () => {
+    render(<App/>)
+
+    const inputText = screen.getByRole('textbox');
+    expect(inputText).toBeInTheDocument()
+
+    fireEvent.change(inputText, { target: { value: 'Olinadss'}})
+    expect(inputText).toHaveValue('Olinadss')
   })
 })
