@@ -1,5 +1,6 @@
 import React from "react";
 import { fireEvent, render, screen } from "@testing-library/react";
+import userEvent from '@testing-library/user-event'
 import App from '../App'
 
 describe('GitHub Viewer test', () => {
@@ -31,5 +32,31 @@ describe('GitHub Viewer test', () => {
 
     fireEvent.change(inputText, { target: { value: 'Olinadss'}})
     expect(inputText).toHaveValue('Olinadss')
+  })
+
+  test('Se aparece os repositórios quando é pesquisado', async () => {
+    render(<App/>)
+
+    const inputText = screen.getByRole('textbox');
+    expect(inputText).toBeInTheDocument()
+    const searchButton = screen.getByRole('button');
+
+    fireEvent.change(inputText, { target: { value: 'Olinadss'}})
+
+    fireEvent.click(searchButton)
+
+    const textRepoUser = await screen.findByRole('heading', {
+      level: 1,
+      name: 'Repositorio de Danilo dos Santos Souza'
+    })
+
+    expect(textRepoUser).toBeInTheDocument()
+
+    const textRepoName = await screen.findByRole('heading', {
+      level: 3,
+      name: 'Balanceamento-de-Brackets'
+    })
+
+    expect(textRepoName).toBeInTheDocument()
   })
 })
